@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Consumo De Apis</title>
+</head>
+<body>
+    <header>
+        <h1>Consumo De Apis</h1>
+    </header>
+    <main>
+        <section class="card">
+            <label for="apiKey">API Key</label>
+            <input type="password" id="apiKey" placeholder="Ingresa tu API Key" />
+        </section>
+        <section class="input-section">
+            <div class="input-container">
+                <label for="IdInput">Nombre o ID del juego:</label>
+                <input type="text" id="IdInput" placeholder="Ej:Del 1 Al 89000">
+            </div>
+            <div class="button-container">
+                <button class="fetch-button" onclick="consultarId()">Consultar id</button>
+            </div>
+        </section>
+        <section class="input-section">
+            <div class="input-container">
+                <label for="fechaInput">fecha del juego que desea buscar:</label>
+                <input type="text" class="fecha-inicio" id="fechaInput" placeholder="Ej:2023-01-01" >
+                <input type="text" class="fecha-fin" id="fechaFin" placeholder="Ej:2023-12-31">
+            </div>
+            <div class="button-container">
+                <button class="fetch-button" onclick="consultarFechaReleased()">Consultar Fecha Released</button>
+            </div>
+        </section>
+        <section class="input-section">
+            <div class="input-container">
+                <label for="ratingInput">Rating del juego que desea buscar:</label>
+                <input type="text" id="ratingInput" placeholder="Ej: 85">
+            </div>
+            <div class="button-container">
+                <button class="fetch-button" onclick="consultarRating()">Consultar Rating</button>
+            </div>
+        </section>
+        <section id="result-section">
+            <h2>Resultado:</h2>
+            <div id="JuegoMostrado"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por Eidan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
